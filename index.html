@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>🌸 The Shenanigans Club</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+
+<body>
+
+<div class="floating-hearts"></div>
+
+<header class="hero">
+
+    <div class="sparkle">✦</div>
+
+    <p class="tiny-title">WELCOME TO</p>
+
+    <h1>🌸 The Shenanigans Club 🌸</h1>
+
+    <p class="subtitle">
+        12 people. One friendship.  
+        <br>
+        Absolutely no supervision.
+    </p>
+
+    <div class="flower-row">
+        🌷 🌸 🦋 🌷 🌸
+    </div>
+
+</header>
+
+
+<nav class="menu">
+
+    <button onclick="showSection('anonymous')">
+        💌
+        <span>Anonymous</span>
+    </button>
+
+    <button onclick="showSection('notebook')">
+        📖
+        <span>Notebook</span>
+    </button>
+
+    <button onclick="showSection('tea')">
+        🫖
+        <span>Tea Corner</span>
+    </button>
+
+    <button onclick="showSection('memories')">
+        📸
+        <span>Memory Wall</span>
+    </button>
+
+    <button onclick="showSection('forget')">
+        🥹
+        <span>If We Forget...</span>
+    </button>
+
+    <button onclick="showSection('music')">
+        🎵
+        <span>Soundtrack</span>
+    </button>
+
+</nav>
+
+
+<main>
+
+<!-- ========================================= -->
+<!-- ANONYMOUS -->
+<!-- ========================================= -->
+
+<section id="anonymous" class="section">
+
+    <div class="section-title">
+        <span>💌</span>
+
+        <div>
+            <h2>Anonymous Messages</h2>
+
+            <p>
+                Say something you've been wanting to say...
+                nobody has to know it was you 👀
+            </p>
+        </div>
+    </div>
+
+
+    <div class="card">
+
+        <label>What kind of message is this?</label>
+
+        <select id="anonymousCategory">
+
+            <option>💕 Sweet</option>
+            <option>😂 Funny</option>
+            <option>😭 Emotional</option>
+            <option>👀 Suspicious</option>
+            <option>🫖 Tea</option>
+            <option>🤭 Unhinged</option>
+
+        </select>
+
+
+        <textarea
+            id="anonymousMessage"
+            placeholder="Write your anonymous message here..."
+        ></textarea>
+
+
+        <button class="cute-button" onclick="sendAnonymous()">
+            💌 SEND INTO THE VOID
+        </button>
+
+    </div>
+
+
+    <div class="posts">
+
+        <h3>💗 Messages from the void</h3>
+
+        <div id="anonymousList"></div>
+
+    </div>
+
+</section>
+
+
+<!-- ========================================= -->
+<!-- NOTEBOOK -->
+<!-- ========================================= -->
+
+<section id="notebook" class="section">
+
+    <div class="section-title">
+
+        <span>📖</span>
+
+        <div>
+
+            <h2>Our Little Notebook</h2>
+
+            <p>
+                A shared diary for the chaos, memories and random thoughts.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="card">
+
+        <input
+            id="notebookName"
+            placeholder="Your name"
+        >
+
+        <textarea
+            id="notebookText"
+            placeholder="Write something for the group..."
+        ></textarea>
+
+        <button class="cute-button" onclick="addNotebook()">
+            📖 Add to the notebook
+        </button>
+
+    </div>
+
+
+    <div class="posts">
+
+        <h3>🌷 Recent pages</h3>
+
+        <div id="notebookList"></div>
+
+    </div>
+
+</section>
+
+
+<!-- ========================================= -->
+<!-- TEA -->
+<!-- ========================================= -->
+
+<section id="tea" class="section">
+
+    <div class="section-title">
+
+        <span>🫖</span>
+
+        <div>
+
+            <h2>The Tea Corner</h2>
+
+            <p>
+                Please place all completely unnecessary gossip here.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="tea-warning">
+
+        🫖 <strong>OFFICIAL TEA DISCLAIMER</strong>
+
+        <br>
+
+        Everything here is for fun.
+        Be kind. Don't post private or harmful information. 💗
+
+    </div>
+
+
+    <div class="card">
+
+        <input
+            id="teaName"
+            placeholder="Your name"
+        >
+
+        <select id="teaLevel">
+
+            <option>🫖 Mild</option>
+
+            <option>🫖🫖 Interesting</option>
+
+            <option>🫖🫖🫖 GIRL WHAT</option>
+
+            <option>🫖🫖🫖🫖 CALL THE GROUP</option>
+
+        </select>
+
+
+        <textarea
+            id="teaText"
+            placeholder="Drop the tea..."
+        ></textarea>
+
+
+        <button class="cute-button" onclick="addTea()">
+            🫖 DROP THE TEA
+        </button>
+
+    </div>
+
+
+    <div class="posts">
+
+        <h3>👀 Latest tea</h3>
+
+        <div id="teaList"></div>
+
+    </div>
+
+</section>
+
+
+<!-- ========================================= -->
+<!-- MEMORY WALL -->
+<!-- ========================================= -->
+
+<section id="memories" class="section">
+
+    <div class="section-title">
+
+        <span>📸</span>
+
+        <div>
+
+            <h2>Memory Wall</h2>
+
+            <p>
+                Little moments we don't want to forget.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="card">
+
+        <input
+            id="memoryName"
+            placeholder="Your name"
+        >
+
+        <input
+            id="memoryImage"
+            placeholder="Image URL (optional)"
+        >
+
+        <textarea
+            id="memoryCaption"
+            placeholder="Tell us about this memory..."
+        ></textarea>
+
+
+        <button class="cute-button" onclick="addMemory()">
+            📸 Pin this memory
+        </button>
+
+    </div>
+
+
+    <div id="memoryGrid" class="memory-grid"></div>
+
+</section>
+
+
+<!-- ========================================= -->
+<!-- IF WE FORGET -->
+<!-- ========================================= -->
+
+<section id="forget" class="section">
+
+    <div class="forget-card">
+
+        <div class="giant-heart">
+            💗
+        </div>
+
+        <h2>If We Ever Forget...</h2>
+
+        <p>
+            Remember the stupid jokes.
+        </p>
+
+        <p>
+            Remember the random conversations.
+        </p>
+
+        <p>
+            Remember the days we didn't want to leave each other.
+        </p>
+
+        <p>
+            Remember how twelve completely different people
+            somehow became a little family.
+        </p>
+
+        <div class="flower-row">
+            🌷 🌸 🦋 🌸 🌷
+        </div>
+
+        <p class="final-message">
+            Whatever happens,
+            these memories happened.
+            And nobody can take them away. 💗
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ========================================= -->
+<!-- SOUNDTRACK -->
+<!-- ========================================= -->
+
+<section id="music" class="section">
+
+    <div class="section-title">
+
+        <span>🎵</span>
+
+        <div>
+
+            <h2>Our Soundtrack</h2>
+
+            <p>
+                Songs that sound like us.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="music-grid">
+
+        <div class="music-card">
+
+            <div class="music-icon">🌸</div>
+
+            <h3>Main Character Song</h3>
+
+            <p>Add your group's song here.</p>
+
+            <a href="YOUR-LINK-HERE" target="_blank">
+                🎵 PLAY
+            </a>
+
+        </div>
+
+
+        <div class="music-card">
+
+            <div class="music-icon">😂</div>
+
+            <h3>The Chaotic One</h3>
+
+            <p>The song that immediately starts nonsense.</p>
+
+            <a href="#" target="_blank">
+                🎵 PLAY
+            </a>
+
+        </div>
+
+
+        <div class="music-card">
+
+            <div class="music-icon">😭</div>
+
+            <h3>2AM Feelings</h3>
+
+            <p>For those unnecessarily emotional nights.</p>
+
+            <a href="#" target="_blank">
+                🎵 PLAY
+            </a>
+
+        </div>
+
+
+        <div class="music-card">
+
+            <div class="music-icon">💃</div>
+
+            <h3>Everyone Knows This</h3>
+
+            <p>The song nobody is allowed to skip.</p>
+
+            <a href="#" target="_blank">
+                🎵 PLAY
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+    🌷 Made with questionable decisions & lots of friendship 🌷
+
+    <br>
+
+    <span>THE SHENANIGANS CLUB © 2026</span>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
