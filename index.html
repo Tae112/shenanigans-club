@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#f7b6d2"
+    >
+
+    <meta
+        name="apple-mobile-web-app-capable"
+        content="yes"
+    >
+
+    <title>🎀 The Shenanigans Club</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+    <link
+        rel="manifest"
+        href="manifest.json"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     🌸 HERO
+     ===================================================== -->
+
+<header class="hero">
+
+    <div class="sparkles">
+        ✦ ✧ ✦ ✧ ✦
+    </div>
+
+    <div class="bow">
+        🎀
+    </div>
+
+    <h1>
+        The Shenanigans Club
+    </h1>
+
+    <p>
+        our tiny corner of chaos, friendship & memories 💕
+    </p>
+
+</header>
+
+
+<!-- =====================================================
+     🎀 NAVIGATION
+     ===================================================== -->
+
+<nav class="nav">
+
+    <button onclick="showSection('home')">
+        🏠 Home
+    </button>
+
+    <button onclick="showSection('members')">
+        👭 Us
+    </button>
+
+    <button onclick="showSection('messages')">
+        💌 Messages
+    </button>
+
+    <button onclick="showSection('notebook')">
+        📖 Notebook
+    </button>
+
+    <button onclick="showSection('tea')">
+        🫖 Tea
+    </button>
+
+    <button onclick="showSection('memories')">
+        📸 Memories
+    </button>
+
+    <button onclick="showSection('music')">
+        🎵 Soundtrack
+    </button>
+
+    <button onclick="showSection('awards')">
+        🏆 Awards
+    </button>
+
+    <button onclick="showSection('mystery')">
+        🔮 Mystery
+    </button>
+
+    <button onclick="showSection('random')">
+        🎲 Shenanigans
+    </button>
+
+</nav>
+
+
+<main>
+
+
+<!-- =====================================================
+     🏠 HOME
+     ===================================================== -->
+
+<section
+    id="home"
+    class="section active"
+>
+
+    <div class="welcome card-big">
+
+        <div class="flower">
+            🌷
+        </div>
+
+        <h2>
+            Welcome, besties! 💗
+        </h2>
+
+        <p>
+            This is our little digital clubhouse for memories,
+            secrets, music, tea and completely unnecessary chaos.
+        </p>
+
+        <button
+            class="main-button"
+            onclick="randomShenanigan()"
+        >
+            ✨ Give me chaos ✨
+        </button>
+
+        <p
+            id="homeRandom"
+            class="result"
+        ></p>
+
+    </div>
+
+
+    <div class="cards">
+
+
+        <div
+            class="feature"
+            onclick="showSection('members')"
+        >
+
+            <span>👭</span>
+
+            <h3>
+                Our People
+            </h3>
+
+            <p>
+                Meet the chaos-makers.
+            </p>
+
+        </div>
+
+
+        <div
+            class="feature"
+            onclick="showSection('messages')"
+        >
+
+            <span>💌</span>
+
+            <h3>
+                Anonymous Messages
+            </h3>
+
+            <p>
+                Say what you really think 👀
+            </p>
+
+        </div>
+
+
+        <div
+            class="feature"
+            onclick="showSection('notebook')"
+        >
+
+            <span>📖</span>
+
+            <h3>
+                Our Notebook
+            </h3>
+
+            <p>
+                Random thoughts & memories.
+            </p>
+
+        </div>
+
+
+        <div
+            class="feature"
+            onclick="showSection('tea')"
+        >
+
+            <span>🫖</span>
+
+            <h3>
+                Tea Corner
+            </h3>
+
+            <p>
+                There is ALWAYS tea.
+            </p>
+
+        </div>
+
+
+        <div
+            class="feature"
+            onclick="showSection('memories')"
+        >
+
+            <span>📸</span>
+
+            <h3>
+                Memory Wall
+            </h3>
+
+            <p>
+                Our favourite moments.
+            </p>
+
+        </div>
+
+
+        <div
+            class="feature"
+            onclick="showSection('music')"
+        >
+
+            <span>🎵</span>
+
+            <h3>
+                Our Soundtrack
+            </h3>
+
+            <p>
+                Songs that remind us of us.
+            </p>
+
+        </div>
+
+
+        <div
+            class="feature"
+            onclick="showSection('awards')"
+        >
+
+            <span>🏆</span>
+
+            <h3>
+                Group Awards
+            </h3>
+
+            <p>
+                Completely serious awards.
+            </p>
+
+        </div>
+
+
+        <div
+            class="feature"
+            onclick="showSection('mystery')"
+        >
+
+            <span>🔮</span>
+
+            <h3>
+                Mystery Room
+            </h3>
+
+            <p>
+                Enter if you dare...
+            </p>
+
+        </div>
+
+
+        <div
+            class="feature"
+            onclick="showSection('random')"
+        >
+
+            <span>🎲</span>
+
+            <h3>
+                Random Shenanigans
+            </h3>
+
+            <p>
+                Because chaos needs organization.
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="letter">
+
+        <div class="flower">
+            🌸
+        </div>
+
+        <h2>
+            If We Ever Forget... 🥹
+        </h2>
+
+        <p>
+            We were here.
+        </p>
+
+        <p>
+            We laughed too loudly, made questionable decisions,
+            created ridiculous memories and somehow survived
+            each other's nonsense.
+        </p>
+
+        <p>
+            No matter where life takes us,
+            this little corner will always belong to us. 💕
+        </p>
+
+        <strong>
+            — The Shenanigans Club 🎀
+        </strong>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     👭 MEMBERS
+     ===================================================== -->
+
+<section
+    id="members"
+    class="section"
+>
+
+    <div class="section-title">
+
+        <span>👭</span>
+
+        <h2>
+            Our People
+        </h2>
+
+        <p>
+            The little collection of chaos-makers.
+        </p>
+
+    </div>
+
+
+    <form
+        onsubmit="addMember(event)"
+        class="form-card"
+    >
+
+        <input
+            id="memberName"
+            placeholder="Name"
+            required
+        >
+
+        <input
+            id="memberNickname"
+            placeholder="Nickname"
+        >
+
+        <label class="file-label">
+            📸 Choose profile photo
+        </label>
+
+        <input
+            id="memberAvatar"
+            type="file"
+            accept="image/*"
+        >
+
+        <button>
+            💗 Add Bestie
+        </button>
+
+    </form>
+
+
+    <div
+        id="membersList"
+        class="member-grid"
+    ></div>
+
+</section>
+
+
+<!-- =====================================================
+     💌 ANONYMOUS MESSAGES
+     ===================================================== -->
+
+<section
+    id="messages"
+    class="section"
+>
+
+    <div class="section-title">
+
+        <span>💌</span>
+
+        <h2>
+            Anonymous Messages
+        </h2>
+
+        <p>
+            Say it without revealing yourself 👀
+        </p>
+
+    </div>
+
+
+    <form
+        onsubmit="sendAnonymous(event)"
+        class="form-card"
+    >
+
+        <select id="messageCategory">
+
+            <option>
+                Confession
+            </option>
+
+            <option>
+                Compliment
+            </option>
+
+            <option>
+                Tea 👀
+            </option>
+
+            <option>
+                Random
+            </option>
+
+            <option>
+                I miss you
+            </option>
+
+        </select>
+
+
+        <textarea
+            id="anonymousMessage"
+            placeholder="Write your anonymous message..."
+            required
+        ></textarea>
+
+
+        <button>
+            💌 Send Anonymously
+        </button>
+
+    </form>
+
+
+    <div
+        id="messagesList"
+        class="entries"
+    ></div>
+
+</section>
+
+
+<!-- =====================================================
+     📖 NOTEBOOK
+     ===================================================== -->
+
+<section
+    id="notebook"
+    class="section"
+>
+
+    <div class="section-title">
+
+        <span>📖</span>
+
+        <h2>
+            Our Group Notebook
+        </h2>
+
+        <p>
+            Things we want to remember.
+        </p>
+
+    </div>
+
+
+    <form
+        onsubmit="addNotebook(event)"
+        class="form-card"
+    >
+
+        <input
+            id="notebookName"
+            placeholder="Your name"
+            required
+        >
+
+        <textarea
+            id="notebookNote"
+            placeholder="Write something for the group..."
+            required
+        ></textarea>
+
+        <button>
+            📖 Add to Notebook
+        </button>
+
+    </form>
+
+
+    <div
+        id="notebookList"
+        class="entries"
+    ></div>
+
+</section>
+
+
+<!-- =====================================================
+     🫖 TEA
+     ===================================================== -->
+
+<section
+    id="tea"
+    class="section"
+>
+
+    <div class="section-title">
+
+        <span>🫖</span>
+
+        <h2>
+            Tea Corner
+        </h2>
+
+        <p>
+            We need to discuss something...
+        </p>
+
+    </div>
+
+
+    <form
+        onsubmit="addTea(event)"
+        class="form-card"
+    >
+
+        <input
+            id="teaName"
+            placeholder="Your name"
+            required
+        >
+
+        <input
+            id="teaText"
+            placeholder="What's the tea?"
+            required
+        >
+
+        <select id="teaLevel">
+
+            <option>
+                ☕ Tiny tea
+            </option>
+
+            <option>
+                ☕☕ Medium tea
+            </option>
+
+            <option>
+                ☕☕☕ SERIOUS TEA
+            </option>
+
+            <option>
+                🚨 EMERGENCY TEA
+            </option>
+
+        </select>
+
+        <button>
+            🫖 Spill the Tea
+        </button>
+
+    </form>
+
+
+    <div
+        id="teaList"
+        class="entries"
+    ></div>
+
+</section>
+
+
+<!-- =====================================================
+     📸 MEMORIES
+     ===================================================== -->
+
+<section
+    id="memories"
+    class="section"
+>
+
+    <div class="section-title">
+
+        <span>📸</span>
+
+        <h2>
+            Memory Wall
+        </h2>
+
+        <p>
+            Real memories from our real chaos.
+        </p>
+
+    </div>
+
+
+    <form
+        onsubmit="addMemory(event)"
+        class="form-card"
+    >
+
+        <input
+            id="memoryName"
+            placeholder="Your name"
+            required
+        >
+
+        <input
+            id="memoryCaption"
+            placeholder="Caption for this memory..."
+            required
+        >
+
+        <label class="file-label">
+            📸 Choose a memory
+        </label>
+
+        <input
+            id="memoryPhoto"
+            type="file"
+            accept="image/*"
+            required
+        >
+
+        <button>
+            📸 Add Memory
+        </button>
+
+    </form>
+
+
+    <div
+        id="memoriesList"
+        class="memory-grid"
+    ></div>
+
+</section>
+
+
+<!-- =====================================================
+     🎵 MUSIC
+     ===================================================== -->
+
+<section
+    id="music"
+    class="section"
+>
+
+    <div class="section-title">
+
+        <span>🎵</span>
+
+        <h2>
+            Our Soundtrack
+        </h2>
+
+        <p>
+            Add the songs that belong to us.
+        </p>
+
+    </div>
+
+
+    <form
+        onsubmit="addMusic(event)"
+        class="form-card"
+    >
+
+        <input
+            id="musicTitle"
+            placeholder="Song title"
+            required
+        >
+
+        <input
+            id="musicArtist"
+            placeholder="Artist"
+        >
+
+        <input
+            id="musicUrl"
+            placeholder="YouTube / Spotify link"
+            required
+        >
+
+        <input
+            id="musicAddedBy"
+            placeholder="Added by"
+            required
+        >
+
+        <button>
+            🎵 Add Song
+        </button>
+
+    </form>
+
+
+    <div
+        id="musicList"
+        class="entries"
+    ></div>
+
+</section>
+
+
+<!-- =====================================================
+     🏆 AWARDS
+     ===================================================== -->
+
+<section
+    id="awards"
+    class="section"
+>
+
+    <div class="section-title">
+
+        <span>🏆</span>
+
+        <h2>
+            Group Awards
+        </h2>
+
+        <p>
+            Absolutely legitimate awards. Probably.
+        </p>
+
+    </div>
+
+
+    <form
+        onsubmit="addAward(event)"
+        class="form-card"
+    >
+
+        <input
+            id="awardTitle"
+            placeholder="Award title"
+            required
+        >
+
+        <input
+            id="awardWinner"
+            placeholder="Winner"
+            required
+        >
+
+        <input
+            id="awardMonth"
+            placeholder="Month"
+        >
+
+        <textarea
+            id="awardDescription"
+            placeholder="Why did they win?"
+        ></textarea>
+
+        <button>
+            🏆 Give Award
+        </button>
+
+    </form>
+
+
+    <div
+        id="awardsList"
+        class="entries"
+    ></div>
+
+</section>
+
+
+<!-- =====================================================
+     🔮 MYSTERY
+     ===================================================== -->
+
+<section
+    id="mystery"
+    class="section"
+>
+
+    <div class="section-title">
+
+        <span>🔮</span>
+
+        <h2>
+            The Mystery Room
+        </h2>
+
+        <p>
+            Some things are better left unexplained...
+        </p>
+
+    </div>
+
+
+    <form
+        onsubmit="addMystery(event)"
+        class="form-card"
+    >
+
+        <input
+            id="mysteryTitle"
+            placeholder="Mystery title"
+            required
+        >
+
+        <textarea
+            id="mysteryDescription"
+            placeholder="What's the mystery?"
+            required
+        ></textarea>
+
+        <input
+            id="mysteryAnswer"
+            placeholder="Secret answer"
+        >
+
+        <button>
+            🔮 Add Mystery
+        </button>
+
+    </form>
+
+
+    <div
+        id="mysteriesList"
+        class="entries"
+    ></div>
+
+</section>
+
+
+<!-- =====================================================
+     🎲 RANDOM
+     ===================================================== -->
+
+<section
+    id="random"
+    class="section"
+>
+
+    <div class="section-title">
+
+        <span>🎲</span>
+
+        <h2>
+            Random Shenanigans
+        </h2>
+
+        <p>
+            Press the button. Accept your fate.
+        </p>
+
+    </div>
+
+
+    <div class="random-box">
+
+        <div id="randomText">
+
+            What are you waiting for? 👀
+
+        </div>
+
+
+        <button
+            class="main-button"
+            onclick="randomShenanigan()"
+        >
+
+            🎲 Give Me Something Random
+
+        </button>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+<footer>
+
+    Made with 💗, friendship & questionable decisions
+
+    <br>
+
+    <small>
+        The Shenanigans Club 🎀
+    </small>
+
+</footer>
+
+
+<script
+    src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+></script>
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
+EOF
+
